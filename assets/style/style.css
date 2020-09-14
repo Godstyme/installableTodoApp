@@ -1,0 +1,176 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+:root{
+  color: #fff;
+  font-family: monospace;
+}
+main{
+  background: #333543;
+  min-height: 100vh;
+}
+header{
+  text-align: center;
+  padding: 80px 0px 3px 0px;
+}
+header > h1{
+ text-shadow: 3px 3px 2px #000;
+ font-size: 4em;
+}
+header > nav.nav{
+  padding-top: 20px;
+}
+header nav form > div.inputHolder{
+  display: flex;
+  justify-content: center;
+}
+header > nav.nav > form div > input.txtInput{
+  height: 3em;
+  width: 20%;
+  font-size: 1em;
+  padding-left: 10px;
+  outline: none;
+  transition: width 2s;
+}
+header > nav.nav > form div > input.btnInput{
+  height: 3em;
+  width: 10%;
+  background: #889A2C;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bolder;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px 4px #000;
+  color: #fff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header > nav.nav > form div > input.txtInput:focus{
+  width: 30%;
+}
+main > section.mainBody{
+  padding-bottom: 20px;
+}
+main > section.mainBody > div.taskHolder{
+  background: aliceblue;
+  color: #000;
+  width: 60%;
+  padding: 10px 0px;
+  margin: 3em auto;
+  font-size: 2em;
+  box-shadow: 2px 2px 4px #000;
+}
+section div > h1.taskCaption{
+  padding-left: 4px;
+  text-shadow: 2px 2px 3px rgb(92, 90, 90);
+}
+section div > ol{
+  list-style-position: inside;
+  padding-bottom: 20px;
+}
+li:nth-child(even){
+  padding: 4px 10px;
+  background: azure;
+  margin: 5px 0px;
+  box-shadow: 2px 2px 4px #000;
+}
+li:nth-child(odd){
+  padding: 4px 10px;
+  box-shadow: 2px 2px 4px #000;
+  background: beige;
+}
+footer{
+  padding-bottom: 20px;
+}
+footer > div > div.socialHandle{
+  padding: 10px 0px;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+footer > div{
+  padding-top: 20px;
+  text-align: center;
+}
+
+
+
+@media screen and (min-width: 200px) and (max-width:500px) {
+  header > h1{
+    text-shadow: 4px 4px 3px #200;
+    font-size: 3em;
+   }
+  header nav form > div.inputHolder{
+    display: flex;
+    justify-content: center;
+  }
+  header > nav.nav > form div > input.txtInput{
+    height: 2em;
+    width: 45%;
+    font-size: 1em;
+    padding-left: 10px;
+    transition: width 2s;
+  }
+  header > nav.nav > form div > input.btnInput{
+    height: 2em;
+    width: 25%;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bolder;
+  }
+  header > nav.nav > form div > input.txtInput:focus{
+    width: 60%;
+  }
+  main > section.mainBody > div.taskHolder{
+    background: aliceblue;
+    color: #000;
+    width: 90%;
+    padding: 10px 0px;
+    margin: 3em auto;
+    font-size: 2em;
+    box-shadow: 2px 2px 4px #000;
+  }
+
+}
+
+@media screen and (min-width: 501px) and (max-width:1024px) {
+  header > h1{
+    text-shadow: 4px 4px 3px #200;
+    font-size: 3em;
+   }
+   header nav form > div.inputHolder{
+    display: flex;
+    justify-content: center;
+  }
+  header > nav.nav > form div > input.txtInput{
+    height: 2em;
+    width: 40%;
+    font-size: 1em;
+    padding-left: 10px;
+    /* background: grey; */
+  }
+  header > nav.nav > form div > input.btnInput{
+    height: 2em;
+    width: 20%;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bolder;
+  }
+  header > nav.nav > form div > input.txtInput:focus{
+    width: 60%;
+  }
+  main > section.mainBody > div.taskHolder{
+    background: aliceblue;
+    color: #000;
+    width: 100%;
+    padding: 10px 0px;
+    margin: 3em auto;
+    font-size: 2em;
+    box-shadow: 2px 2px 4px #000;
+  }
+}
