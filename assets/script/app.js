@@ -1,6 +1,14 @@
+// const mainBody = document.querySelector('.hidden')
+// const loader = document.querySelector('.loader')
+// mainBody.classList.remove('hidden')
+// loader.classList.add('hidden')
 // === event click that add tasks to the list element ============
 const addTask = document.querySelector('.btnInput').addEventListener('click', (e) => {
   e.preventDefault()
+  const taskHolder = document.querySelector('.taskHolder')
+  const printBtn = document.querySelector('.print')
+  taskHolder.style.visibility = 'visible'
+  printBtn.style.visibility = 'visible'
   const tasks = document.querySelector('.txtInput')
   if (tasks.value.length === 0) {
     alert('Input a task...')
@@ -19,14 +27,14 @@ const todoTask = (listValue) => {
   lists.appendChild(list)
   list.style.textTransform = 'Capitalize'
   list.appendChild(span)
-  span.style.width = '40%'
+  span.style.width = '50%'
   span.style.display = 'flex'
   span.style.justifyContent = 'space-around'
 
   // section that created delete button
   const deleteBtn = document.createElement('button')
   deleteBtn.className = 'del'
-  deleteBtn.style.width = '40%'
+  deleteBtn.style.width = '30%'
   deleteBtn.className = 'fas fa-trash-alt'
   deleteBtn.style.background = '#889A2C'
   deleteBtn.style.color = '#fff'
@@ -42,7 +50,7 @@ const todoTask = (listValue) => {
   // section that created edit/update button
   const updateBtn = document.createElement('button')
   updateBtn.className = 'edit'
-  updateBtn.style.width = '40%'
+  updateBtn.style.width = '30%'
   updateBtn.className = 'far fa-edit'
   updateBtn.style.background = '#889A2C'
   updateBtn.style.color = '#fff'
@@ -63,7 +71,6 @@ const todoTask = (listValue) => {
   //  an event that update each task
   updateBtn.addEventListener('click', () => {
     document.querySelector('.txtInput').value = listValue
-    // list.textContent = listValue
   })
 
   //  Clears the input field after a list has been added

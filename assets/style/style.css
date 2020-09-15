@@ -7,9 +7,32 @@
   color: #fff;
   font-family: monospace;
 }
+body div.loader{
+  height: 15rem;
+  width: 15rem;
+  border: 1.6rem solid #fff;
+  box-shadow: 2px 2px 4px #000;
+  border-radius: 50%;
+  border-top: 1.6rem solid #56a5eb;
+  border-bottom: 1.6rem solid #56a5eb;
+  animation: spin 2s linear infinite;
+  /* justify-content: flex-end; */
+}
+
+@keyframes spin {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
 main{
   background: #333543;
   min-height: 100vh;
+}
+main.hidden{
+  display: none;
 }
 header{
   text-align: center;
@@ -63,6 +86,7 @@ main > section.mainBody > div.taskHolder{
   margin: 3em auto;
   font-size: 2em;
   box-shadow: 2px 2px 4px #000;
+  visibility: hidden;
 }
 section div > h1.taskCaption{
   padding-left: 4px;
@@ -96,6 +120,26 @@ a{
 footer > div{
   padding-top: 20px;
   text-align: center;
+}
+div.printHolder{
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
+button.print{
+  height: 3em;
+  width: 15%;
+  cursor: pointer;
+  margin-right: 2em;
+  background: #889A2C;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 0.5em;
+  box-shadow: 2px 2px 3px #000;
+  visibility: hidden;
 }
 
 
@@ -172,5 +216,18 @@ footer > div{
     margin: 3em auto;
     font-size: 2em;
     box-shadow: 2px 2px 4px #000;
+  }
+  button.print{
+    height: 3em;
+    width: 20%;
+    cursor: pointer;
+    margin-right: 2em;
+    background: #889A2C;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #fff;
+    box-shadow: 2px 2px 3px #000;
+    visibility: hidden;
   }
 }
