@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="todoApp">
+  <title>INSTALLABLE TODO APP</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+</head>
+<body>
+  <!-- <div class="loader"></div> -->
+  <main class="">
+    <header>
+      <h1>TODO APP</h1>
+      <nav class="nav">
+        <form class="frm">
+          <div class="inputHolder">
+            <input type="text" name="search" id="txt" class="txtInput" placeholder="Enter Task..." required autocomplete="off">
+            <input type="button" value="ADD" id="btn" class="btnInput">
+          </div>
+        </form>
+      </nav>
+    </header>
+    <section class="mainBody">
+      <div class="taskHolder">
+        <h1 class="taskCaption">TASKS</h1>
+        <ol class="tasksList">
+        </ol>
+        <div class="printHolder">
+          <button class="print" onclick="print()">Print</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <p>Lets connect @</p>
+        <div class="socialHandle">
+          <a href="">Facebook</a> | <a href="">Twitter</a> | <a href="">github</a> 
+        </div>
+      </div>
+      <div>
+        Copyright &copy; <span class="year"> </span>&nbsp; All right reserve | Designed by Godstime Onyibe &hearts;
+      </div>
+    </footer>
+  </main>
+  <script src="assets/script/app.js"></script>
+</body>
+</html>
