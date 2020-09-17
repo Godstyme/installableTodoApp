@@ -3,6 +3,7 @@
 // mainBody.classList.remove('hidden')
 // loader.classList.add('hidden')
 // === event click that add tasks to the list element ============
+let currentList = null;
 const addTask = document.querySelector('.btnInput').addEventListener('click', (e) => {
   e.preventDefault()
   const taskHolder = document.querySelector('.taskHolder')
@@ -20,10 +21,22 @@ const addTask = document.querySelector('.btnInput').addEventListener('click', (e
 // ========== function that display tasks added ======
 const todoTask = (listValue) => {
   const lists = document.querySelector('.tasksList')
-  const list = document.createElement('li')
+  let list = null;
+  if (currentList == null) {
+    list = document.createElement('li')
+  } else {
+    let item = currentList.querySelector(".listTextSpan")
+    item.textContent = listValue;
+    //unset the global tracker
+    resetAddButton()
+    return
+  }
+  const listTextSpan = document.createElement("span");
+  listTextSpan.textContent = listValue;
+  listTextSpan.className = "listTextSpan"
+  list.appendChild(listTextSpan)
   const span = document.createElement('span')
   list.style.width = '100%'
-  list.textContent = listValue
   lists.appendChild(list)
   list.style.textTransform = 'Capitalize'
   list.appendChild(span)
@@ -70,11 +83,18 @@ const todoTask = (listValue) => {
 
   //  an event that update each task
   updateBtn.addEventListener('click', () => {
-    document.querySelector('.txtInput').value = listValue
+    currentList = list;
+    document.querySelector(".btnInput").value = "Update"
+    document.querySelector('.txtInput').value = currentList.querySelector(".listTextSpan").textContent
   })
 
   //  Clears the input field after a list has been added
   document.querySelector('.txtInput').value = ''
+
+}
+const resetAddButton = () => {
+  currentList = null;
+  document.querySelector(".btnInput").value = "Add"
 }
 
 //  ======  time function that is display at the footer ==========
